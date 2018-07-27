@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_LSHIFT,  KC_Z,     KC_X,     KC_C,     KC_V,   KC_B,   TT(1),
       KC_LCTL,    KC_LALT,  KC_GRAVE,  KC_LBRACKET, KC_RBRACKET,
 
-                              KC_DELETE,   KC_POWER,
+                              KC_DELETE,   LGUI(S(KC_Q)),
                                            KC_PGUP,
                     KC_SPACE,  KC_LGUI,   KC_PGDN,
 
@@ -47,8 +47,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS,        KC_PERC,  KC_CIRC,      KC_LBRACKET,  KC_RBRACKET,  KC_TILD,  KC_TRNS,
     KC_TRNS,        KC_TRNS,  KC_TRNS,      KC_TRNS,      KC_TRNS,
 
-                    KC_TRNS,        KC_TRNS,
-                    KC_TRNS,
+                                    KC_TRNS,  KC_POWER,
+                                              KC_TRNS,
                     KC_TRNS,        KC_TRNS,  KC_TRNS,
 
     KC_TRNS,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,
@@ -57,9 +57,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS,  KC_AMPR,    KC_1,     KC_2,     KC_3,   KC_BSLASH,  KC_TRNS,
                           KC_TRNS,  KC_KP_0,  KC_TRNS,  KC_EQUAL, KC_TRNS,
 
-                    KC_TRNS,        KC_TRNS,
-                                    KC_TRNS,
-                    KC_TRNS,        KC_TRNS,  KC_TRNS
+                    KC_TRNS,  KC_TRNS,
+                    KC_TRNS,
+                    KC_TRNS,  KC_TRNS,  KC_TRNS
     ),
 
   [2] = LAYOUT_ergodox(
