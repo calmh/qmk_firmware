@@ -10,6 +10,8 @@ enum custom_keycodes {
   RGB_SLD,
 };
 
+/* docker run -e keymap=calmh -e keyboard=ergodox_ez --rm -v $('pwd'):/qmk:rw edasque/qmk_firmwar */
+
 /*
 LALT(KC_SCOLON), // å
 LALT(KC_LBRACKET), // ä
@@ -19,25 +21,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [0] = LAYOUT_ergodox(
       KC_ESCAPE,  KC_1,     KC_2,     KC_3,     KC_4,   KC_5,   LGUI(KC_SPACE)                                        ,
-      KC_TAB,     KC_Q,     KC_W,     KC_E,     KC_R,   KC_T,   KC_BSPACE,
+      KC_TAB,     KC_Q,     KC_W,     KC_E,     KC_R,   KC_T,   KC_LBRACKET,
       KC_GRAVE,   KC_A,     KC_S,     KC_D,     KC_F,   KC_G,
-      KC_LSHIFT,  KC_Z,     KC_X,     KC_C,     KC_V,   KC_B,   TT(1),
-      KC_LCTL,    KC_LALT,  KC_LGUI,  KC_LBRACKET, KC_RBRACKET,
+      KC_LSHIFT,  KC_Z,     KC_X,     KC_C,     KC_V,   KC_B,   KC_RBRACKET,
+      KC_LCTL,    KC_LALT,  KC_LGUI,  TT(1),    TT(2),
 
                                 KC_DELETE, LGUI(LCTL(KC_Q)),
                                            KC_PGUP,
                     KC_SPACE,  KC_BSPACE,  KC_PGDN,
 
 
-      LGUI(KC_SPACE), KC_6,         KC_7,         KC_8,       KC_9,     KC_0,       KC_MINUS,
-      KC_BSPACE,      KC_Y,         KC_U,         KC_I,       KC_O,     KC_P,       KC_EQUAL,
-                      KC_H,         KC_J,         KC_K,       KC_L,     KC_SCOLON,  KC_QUOTE,
-      TT(2),          KC_N,         KC_M,         KC_COMMA,   KC_DOT,   KC_SLASH,   KC_RSHIFT,
-              LALT(KC_SCOLON),  LALT(KC_LBRACKET), LALT(KC_RBRACKET),  KC_BSLASH,   KC_RCTL,
+      KC_TRNS,    KC_6,         KC_7,     KC_8,      KC_9,     KC_0,       KC_MINUS,
+      KC_UP,      KC_Y,         KC_U,     KC_I,      KC_O,     KC_P,       KC_EQUAL,
+                  KC_H,         KC_J,     KC_K,      KC_L,     KC_SCOLON,  KC_QUOTE,
+      KC_DOWN,    KC_N,         KC_M,     KC_COMMA,  KC_DOT,   KC_SLASH,   KC_RSHIFT,
+                              KC_LEFT,    KC_RIGHT   KC_TRNS,  KC_BSLASH,  KC_TRNS,
 
-                      KC_LEFT,  KC_RIGHT,
-                      KC_UP,
-                      KC_DOWN, KC_ENTER,  KC_SPACE
+                      LALT(KC_SCOLON)/*å*/,  KC_LGUI,
+                      LALT(KC_LBRACKET)/*ä*/,
+                      LALT(KC_RBRACKET)/*ö*/, KC_ENTER,  KC_SPACE
     ),
 
   [1] = LAYOUT_ergodox(
@@ -73,11 +75,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                     KC_F15,
                                   KC_TRNS, KC_TRNS, KC_F14,
     // right hand
-       KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS,  KC_TRNS, KC_TRNS, KC_UP,   KC_TRNS, KC_TRNS, KC_TRNS,
-                 KC_TRNS, KC_LEFT, KC_DOWN, KC_RIGHT, KC_TRNS, KC_TRNS,
-       KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_TRNS,           KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_AUDIO_VOL_UP,   KC_TRNS, KC_TRNS, KC_UP,   KC_TRNS, KC_TRNS, KC_TRNS,
+                KC_TRNS,  KC_LEFT, KC_DOWN, KC_RIGHT, KC_TRNS, KC_TRNS,
+       KC_AUDIO_VOL_DOWN, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                       KC_MEDIA_PREV_TRACK, KC_MEDIA_NEXT_TRACK, KC_TRNS, KC_TRNS, KC_TRNS,
 
                     KC_MEDIA_PREV_TRACK,  KC_MEDIA_NEXT_TRACK,
                     KC_AUDIO_VOL_UP,
