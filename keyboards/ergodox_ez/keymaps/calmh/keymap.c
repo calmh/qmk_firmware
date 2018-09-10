@@ -31,11 +31,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                     KC_SPACE,  KC_BSPACE,  KC_PGDN,
 
 
-      KC_TRNS,    KC_6,         KC_7,     KC_8,      KC_9,     KC_0,       KC_MINUS,
-      KC_UP,      KC_Y,         KC_U,     KC_I,      KC_O,     KC_P,       KC_EQUAL,
-                  KC_H,         KC_J,     KC_K,      KC_L,     KC_SCOLON,  KC_QUOTE,
-      KC_DOWN,    KC_N,         KC_M,     KC_COMMA,  KC_DOT,   KC_SLASH,   KC_RSHIFT,
-                              KC_LEFT,    KC_RIGHT   KC_TRNS,  KC_BSLASH,  KC_TRNS,
+      KC_TRNS,    KC_6,         KC_7,      KC_8,      KC_9,     KC_0,       KC_MINUS,
+      KC_TRNS,    KC_Y,         KC_U,      KC_I,      KC_O,     KC_P,       KC_EQUAL,
+                  KC_H,         KC_J,      KC_K,      KC_L,     KC_SCOLON,  KC_QUOTE,
+      KC_TRNS,    KC_N,         KC_M,      KC_COMMA,  KC_DOT,   KC_UP,      KC_RSHIFT,
+                                KC_SLASH,  KC_BSLASH, KC_LEFT,  KC_DOWN,    KC_RIGHT,
 
                       LALT(KC_SCOLON)/*å*/,  KC_LGUI,
                       LALT(KC_LBRACKET)/*ä*/,
