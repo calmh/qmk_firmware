@@ -34,12 +34,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_TRNS,    KC_6,         KC_7,      KC_8,      KC_9,     KC_0,       KC_MINUS,
       KC_TRNS,    KC_Y,         KC_U,      KC_I,      KC_O,     KC_P,       KC_EQUAL,
                   KC_H,         KC_J,      KC_K,      KC_L,     KC_SCOLON,  KC_QUOTE,
-      KC_TRNS,    KC_N,         KC_M,      KC_COMMA,  KC_DOT,   KC_UP,      KC_RSHIFT,
-                                KC_SLASH,  KC_BSLASH, KC_LEFT,  KC_DOWN,    KC_RIGHT,
+      KC_TRNS,    KC_N,         KC_M,      KC_COMMA,  KC_DOT,   KC_SLASH,   KC_RSHIFT,
+    LALT(KC_SCOLON)/*å*/,  LALT(KC_LBRACKET)/*ä*/, LALT(KC_RBRACKET)/*ö*/,  KC_BSLASH,  KC_RCTL,
 
-                      LALT(KC_SCOLON)/*å*/,  KC_TRNS,
-                      LALT(KC_LBRACKET)/*ä*/,
-                      LALT(KC_RBRACKET)/*ö*/, KC_ENTER,  KC_SPACE
+                      KC_LEFT,  KC_RIGHT,
+                      KC_UP,
+                      KC_DOWN, KC_ENTER,  KC_SPACE
     ),
 
   [1] = LAYOUT_ergodox(
@@ -76,14 +76,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                   KC_TRNS, KC_TRNS, KC_F14,
     // right hand
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_UP,   KC_TRNS, KC_TRNS, KC_TRNS,
-                KC_TRNS, KC_LEFT, KC_DOWN, KC_RIGHT, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_AUDIO_VOL_UP, KC_TRNS,
-                         KC_TRNS, KC_TRNS, KC_MEDIA_PREV_TRACK, KC_AUDIO_VOL_DOWN, KC_MEDIA_NEXT_TRACK,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
 
-                    KC_TRNS, KC_TRNS,
-                    KC_TRNS,
-                    KC_TRNS, KC_MEDIA_PLAY_PAUSE, KC_AUDIO_MUTE
+                    KC_MEDIA_PREV_TRACK, KC_MEDIA_NEXT_TRACK,
+                    KC_AUDIO_VOL_UP,
+                    KC_AUDIO_VOL_DOWN, KC_MEDIA_PLAY_PAUSE, KC_AUDIO_MUTE
 ),
 
 };
