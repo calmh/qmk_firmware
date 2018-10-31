@@ -10,7 +10,7 @@ enum custom_keycodes {
   RGB_SLD,
 };
 
-/* docker run -e keymap=calmh -e keyboard=ergodox_ez --rm -v $('pwd'):/qmk:rw edasque/qmk_firmwar */
+/* docker run -e keymap=calmh -e keyboard=ergodox_ez --rm -v $('pwd'):/qmk:rw edasque/qmk_firmware */
 
 /*
 LALT(KC_SCOLON), // å
@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_TRNS,    KC_Y,         KC_U,      KC_I,      KC_O,     KC_P,       KC_EQUAL,
                   KC_H,         KC_J,      KC_K,      KC_L,     KC_SCOLON,  KC_QUOTE,
       KC_TRNS,    KC_N,         KC_M,      KC_COMMA,  KC_DOT,   KC_SLASH,   KC_RSHIFT,
-    LALT(KC_SCOLON)/*å*/,  LALT(KC_LBRACKET)/*ä*/, LALT(KC_RBRACKET)/*ö*/,  KC_BSLASH,  KC_RCTL,
+    LALT(KC_SCOLON)/*å*/,  LALT(KC_LBRACKET)/*ä*/, LALT(KC_RBRACKET)/*ö*/,  KC_BSLASH,  MO(2),
 
                       KC_LEFT,  KC_RIGHT,
                       KC_UP,
@@ -77,8 +77,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // right hand
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                KC_LEFT, KC_TRNS, KC_TRNS, KC_UP,   KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_RIGHT, KC_TRNS,
                          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
 
                     KC_MEDIA_PREV_TRACK, KC_MEDIA_NEXT_TRACK,
