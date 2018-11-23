@@ -26,16 +26,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_LSHIFT,  KC_Z,     KC_X,     KC_C,     KC_V,   KC_B,   KC_RBRACKET,
       KC_LCTL,    KC_LALT,  KC_LGUI,  TT(1),    TT(2),
 
-                                KC_DELETE, LGUI(LCTL(KC_Q)),
-                                           KC_PGUP,
-                    KC_SPACE,  KC_BSPACE,  KC_PGDN,
+                                KC_DELETE, KC_F1,
+                                           KC_F2,
+                    KC_SPACE,  KC_BSPACE,  KC_F12,
 
 
-      KC_TRNS,    KC_6,         KC_7,      KC_8,      KC_9,     KC_0,       KC_MINUS,
-      KC_TRNS,    KC_Y,         KC_U,      KC_I,      KC_O,     KC_P,       KC_EQUAL,
+LGUI(LCTL(KC_Q)), KC_6,         KC_7,      KC_8,      KC_9,     KC_0,       KC_MINUS,
+  KC_RBRACKET,    KC_Y,         KC_U,      KC_I,      KC_O,     KC_P,       KC_EQUAL,
                   KC_H,         KC_J,      KC_K,      KC_L,     KC_SCOLON,  KC_QUOTE,
       KC_TRNS,    KC_N,         KC_M,      KC_COMMA,  KC_DOT,   KC_SLASH,   KC_RSHIFT,
-    LALT(KC_SCOLON)/*å*/,  LALT(KC_LBRACKET)/*ä*/, LALT(KC_RBRACKET)/*ö*/,  KC_BSLASH,  MO(2),
+    MO(2),  KC_BSLASH, LALT(KC_SCOLON)/*å*/,  LALT(KC_LBRACKET)/*ä*/, LALT(KC_RBRACKET)/*ö*/,
 
                       KC_LEFT,  KC_RIGHT,
                       KC_UP,
@@ -49,19 +49,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS,        KC_PERC,  KC_CIRC,      KC_LBRACKET,  KC_RBRACKET,  KC_TILD,  KC_TRNS,
     KC_TRNS,        KC_TRNS,  KC_TRNS,      KC_TRNS,      KC_TRNS,
 
-                                    KC_TRNS,  KC_POWER,
+                                    KC_TRNS,  KC_TRNS,
                                               KC_TRNS,
                     KC_TRNS,        KC_TRNS,  KC_TRNS,
 
-    KC_TRNS,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,
+    KC_POWER,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,
     KC_TRNS,    KC_UP,    KC_7,     KC_8,     KC_9,     KC_ASTR,  KC_F12,
               KC_DOWN,    KC_4,     KC_5,     KC_6,     KC_PLUS,  KC_TRNS,
     KC_TRNS,  KC_AMPR,    KC_1,     KC_2,     KC_3,   KC_BSLASH,  KC_TRNS,
                           KC_TRNS,  KC_KP_0,  KC_TRNS,  KC_EQUAL, KC_TRNS,
 
-                    KC_TRNS,  KC_TRNS,
-                    KC_TRNS,
-                    KC_TRNS,  KC_TRNS,  KC_TRNS
+                    KC_HOME,  KC_END,
+                    KC_PGUP,
+                    KC_PGDN,  KC_TRNS,  KC_TRNS
     ),
 
   [2] = LAYOUT_ergodox(
@@ -75,11 +75,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                     KC_F15,
                                   KC_TRNS, KC_TRNS, KC_F14,
     // right hand
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                KC_LEFT, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_UP,   KC_TRNS, KC_TRNS,
-                         KC_TRNS, KC_LEFT, KC_DOWN, KC_RIGHT, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_UP,   KC_TRNS,  KC_TRNS, KC_TRNS,
+                KC_TRNS, KC_LEFT, KC_DOWN, KC_RIGHT, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS,
+                         KC_TRNS, KC_TRNS, KC_TRNS,  KC_RIGHT, KC_TRNS,
 
                     KC_MEDIA_PREV_TRACK, KC_MEDIA_NEXT_TRACK,
                     KC_AUDIO_VOL_UP,
