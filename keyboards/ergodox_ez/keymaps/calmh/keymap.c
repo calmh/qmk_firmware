@@ -31,7 +31,7 @@ LGUI(LCTL(KC_Q)), KC_6,         KC_7,      KC_8,      KC_9,     KC_0,       KC_M
   KC_RBRACKET,    KC_Y,         KC_U,      KC_I,      KC_O,     KC_P,       KC_EQUAL,
                   KC_H,         KC_J,      KC_K,      KC_L,     KC_SCOLON,  KC_QUOTE,
       KC_TRNS,    KC_N,         KC_M,      KC_COMMA,  KC_DOT,   KC_SLASH,   KC_RSHIFT,
-                               MO(2),     KC_BSLASH,  SV_AA,    SV_AE,      SV_OE,
+                               TT(2),     KC_BSLASH,  SV_AA,    SV_AE,      SV_OE,
 
                       KC_LEFT,  KC_RIGHT,
                       KC_UP,
@@ -39,21 +39,21 @@ LGUI(LCTL(KC_Q)), KC_6,         KC_7,      KC_8,      KC_9,     KC_0,       KC_M
     ),
 
   [1] = LAYOUT_ergodox(
-    KC_TRNS,        KC_F1,    KC_F2,        KC_F3,        KC_F4,        KC_F5,    KC_TRNS,
-    KC_TRNS,        KC_EXLM,  KC_AT,        KC_LCBR,      KC_RCBR,      KC_PIPE,  KC_TRNS,
-    KC_TRNS,        KC_HASH,  KC_DLR,       KC_LPRN,      KC_RPRN,      KC_GRAVE,
-    KC_TRNS,        KC_PERC,  KC_CIRC,      KC_LBRACKET,  KC_RBRACKET,  KC_TILD,  KC_TRNS,
-    KC_TRNS,        KC_TRNS,  KC_TRNS,      KC_TRNS,      KC_TRNS,
+    KC_TRNS,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_TRNS,
+    KC_TRNS,  KC_EXLM,  KC_AT,    KC_LCBR,  KC_RCBR,  KC_PIPE,  KC_TRNS,
+    KC_TRNS,  KC_HASH,  KC_DLR,   KC_LBRC,  KC_RBRC,  KC_GRAVE,
+    KC_TRNS,  KC_PERC,  KC_CIRC,  KC_LPRN,  KC_RPRN,  KC_TILD,  KC_TRNS,
+    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 
                                     KC_TRNS,  KC_TRNS,
                                               KC_TRNS,
                     KC_TRNS,        KC_TRNS,  KC_TRNS,
 
-    KC_POWER,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,
-    KC_TRNS,    KC_UP,    KC_7,     KC_8,     KC_9,     KC_ASTR,  KC_F12,
-              KC_DOWN,    KC_4,     KC_5,     KC_6,     KC_PLUS,  KC_TRNS,
-    KC_TRNS,  KC_AMPR,    KC_1,     KC_2,     KC_3,   KC_BSLASH,  KC_TRNS,
-                          KC_TRNS,  KC_KP_0,  KC_TRNS,  KC_EQUAL, KC_TRNS,
+    KC_POWER,  KC_F6,    KC_F7,  KC_F8,  KC_F9,  KC_F10,     KC_F11,
+    KC_TRNS,   KC_UP,    KC_7,   KC_8,   KC_9,   KC_ASTR,    KC_F12,
+               KC_DOWN,  KC_4,   KC_5,   KC_6,   KC_PLUS,    KC_TRNS,
+    KC_TRNS,   KC_AMPR,  KC_1,   KC_2,   KC_3,   KC_BSLASH,  KC_TRNS,
+                    KC_TRNS,  KC_KP_0,  KC_TRNS,  KC_EQUAL,  KC_TRNS,
 
                     KC_HOME,  KC_END,
                     KC_PGUP,
