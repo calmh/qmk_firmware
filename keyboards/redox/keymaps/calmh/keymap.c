@@ -42,10 +42,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_NAV] = LAYOUT(
      _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,                                            _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
-     XXXXXXX ,XXXXXXX ,KC_MS_U ,XXXXXXX ,KC_WH_U ,XXXXXXX ,_______ ,                          _______ ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
+     XXXXXXX ,KC_BTN1 ,KC_MS_U ,KC_BTN2 ,KC_WH_U ,XXXXXXX ,_______ ,                          _______ ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
      XXXXXXX ,KC_MS_L ,KC_MS_D ,KC_MS_R ,KC_WH_D ,XXXXXXX ,_______ ,                          _______ ,KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RIGHT,XXXXXXX ,XXXXXXX ,
-     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,_______ ,        _______ ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
-     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,     KC_BTN1 ,    KC_BTN2 ,_______ ,        _______ ,_______ ,    XXXXXXX ,     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX
+     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,_______ ,        _______ ,XXXXXXX ,KC_MEDIA_PREV_TRACK ,KC_AUDIO_VOL_DOWN ,KC_AUDIO_VOL_UP ,KC_MEDIA_NEXT_TRACK ,XXXXXXX ,XXXXXXX ,
+     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,     XXXXXXX ,    XXXXXXX ,_______ ,        _______ ,KC_MEDIA_PLAY_PAUSE ,    XXXXXXX ,     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX
   ),
 
   [_ADJUST] = LAYOUT(
@@ -57,3 +57,65 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 
 };
+
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  bool ls = keyboard_report->mods & MOD_BIT (KC_LSFT);
+  bool rs = keyboard_report->mods & MOD_BIT (KC_RSFT);
+
+  switch (keycode) {
+    case SV_AA:
+      if (record->event.pressed) {
+        SEND_STRING(SS_LALT("a"));
+      }
+      return false;
+      break;
+
+    case SV_AE:
+      if (record->event.pressed) {
+        if (ls) {
+          unregister_code(KC_LSFT);
+        }
+        if (rs) {
+          unregister_code(KC_RSFT);
+        }
+
+        SEND_STRING(SS_LALT("u")); // dead key ¨
+
+        if (ls) {
+          register_code(KC_LSFT);
+        }
+        if (rs) {
+          register_code(KC_RSFT);
+        }
+
+        SEND_STRING("a");
+      }
+      return false;
+      break;
+
+    case SV_OE:
+      if (record->event.pressed) {
+        if (ls) {
+          unregister_code(KC_LSFT);
+        }
+        if (rs) {
+          unregister_code(KC_RSFT);
+        }
+
+        SEND_STRING(SS_LALT("u")); // dead key ¨
+
+        if (ls) {
+          register_code(KC_LSFT);
+        }
+        if (rs) {
+          register_code(KC_RSFT);
+        }
+
+        SEND_STRING("o");
+      }
+      return false;
+      break;
+  }
+  return true;
+}
