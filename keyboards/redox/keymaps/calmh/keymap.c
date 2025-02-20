@@ -26,9 +26,9 @@ const uint32_t PROGMEM unicode_map[] = {
 #define KC_BKSL KC_BSLASH
 #define KC_MENU LGUI(KC_SPACE)
 #define KC_LGOU LGUI(LCTL(KC_Q))
-#define KC_AA XP(UC_AA, UC_AA_CAP)
-#define KC_AE XP(UC_AE, UC_AE_CAP)
-#define KC_OE XP(UC_OE, UC_OE_CAP)
+#define KC_AA RALT(KC_LBRC) // XP(UC_AA, UC_AA_CAP)
+#define KC_AE RALT(KC_QUOT) // XP(UC_AE, UC_AE_CAP)
+#define KC_OE RALT(KC_SCLN) // XP(UC_OE, UC_OE_CAP)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
